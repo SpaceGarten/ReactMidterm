@@ -6,13 +6,11 @@ function QuizList({ data }) {
   return (
     <div>
       <h2>Quiz Questions</h2>
-      <ul>
-        {data.map((question, index) => (
-          <li key={index}>
-            <Link to={`/question/${index}`}>Question {index + 1}</Link>
-          </li>
-        ))}
-      </ul>
+      {data.map((question, index) => (
+        <div key={index}>
+          <Link to={`/question/${index}`}>Question {index + 1}</Link>
+        </div>
+      ))}
     </div>
   );
 }
